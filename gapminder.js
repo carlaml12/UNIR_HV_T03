@@ -116,12 +116,12 @@ contSelect = d3.select('#continente')
 botonPausa = d3.select('#pausa')
 slider     = d3.select('#slider');
 
-d3.csv('esperanzavida_mortalidadinfantil_poblacion.csv').then((data) => {
-  data.forEach((d) => {
-    d.life_exp     = +d.life_exp
-    d.child_mortality   = +d.child_mortality
-    d.population = +d.population
-    d.year       = +d.year
+d3.csv('espvid_mortalinfan_poblacion.csv').then(function(data) {
+  data.forEach(d => {
+      d.life_exp = +d.life_exp
+      d.child_mortality = +d.child_mortality
+      d.population = +d.population
+      d.year = +d.year
 
     // if (d.year > maxy) maxy = d.year
     // if (d.year < miny) miny = d.year
